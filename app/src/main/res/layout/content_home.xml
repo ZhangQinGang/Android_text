@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activities.HomeActivity"
+    tools:showIn="@layout/app_bar_home">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <!---->
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_46"
+            android:background="@drawable/blue_gradient_bg">
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="@dimen/sp_15"
+                android:textColor="@color/white"
+                android:text="首页"
+                />
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment"
+        android:layout_below="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/linearLayout" />
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_36"
+            android:layout_marginTop="@dimen/dp_4"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/home_home"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:drawableTop="@drawable/btn_home_fragment"
+                android:gravity="center"
+                android:text="首页"
+                android:textColor="@drawable/tab_text_color"
+                android:textSize="@dimen/sp_11" />
+
+            <RadioButton
+                android:id="@+id/home_knowledge"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/btn_knowledge_fragment"
+                android:gravity="center"
+                android:text="知识体系"
+                android:textColor="@drawable/tab_text_color"
+                android:textSize="@dimen/sp_11" />
+
+            <RadioButton
+                android:id="@+id/home_navigation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/btn_navigation_fragment"
+                android:gravity="center"
+                android:text="导航"
+                android:textColor="@drawable/tab_text_color"
+                android:textSize="@dimen/sp_11" />
+
+            <RadioButton
+                android:id="@+id/home_items"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/btn_items_fragment"
+                android:gravity="center"
+                android:text="项目"
+                android:textColor="@drawable/tab_text_color"
+                android:textSize="@dimen/sp_11" />
+        </RadioGroup>
+
+    </LinearLayout>
+</RelativeLayout>
